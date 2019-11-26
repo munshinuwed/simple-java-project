@@ -1,11 +1,14 @@
 package com.learning.test.model;
 
+import java.util.*;
+
 public class User {
 
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "id=" + id + ", name=" + name + ", age=" + age + ", weight=" + weight + ", gender=" + gender;
+		return "id=" + id + ", name=" + name + ", age=" + age + ", weight=" + weight + ", gender=" + gender
+				+ ", created by=" + createdBy + ", created at=" + createdAt;
 		// return super.toString();
 	}
 
@@ -14,6 +17,24 @@ public class User {
 	private int age;
 	private double weight;
 	private char gender;
+	private String createdBy;
+	private String createdAt;
+
+	public String getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(Date date) {
+		this.createdAt = date.toString();
+	}
+
+	public String getCreatedBy() {
+		return createdBy;
+	}
+
+	public void setCreatedBy() {
+		this.createdBy = "System";
+	}
 
 	public int getId() {
 		return id;

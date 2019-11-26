@@ -1,5 +1,6 @@
 package com.learning.test.service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
@@ -19,6 +20,8 @@ public class UserService {
 		user.setWeight(scan.nextDouble());
 		System.out.println("gender:");
 		user.setGender(scan.next().charAt(0));
+		user.setCreatedAt(new Date());
+		user.setCreatedBy();
 		validateInput(user, userList);
 		userList.add(user);
 	}
